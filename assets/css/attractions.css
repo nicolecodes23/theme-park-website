@@ -1,0 +1,1170 @@
+:root {
+    --background-color: #0b0d32;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text';
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header position fixed and stacked above */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--background-color);
+}
+
+.navbar {
+    display: flex;
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Responsiveness of navbar */
+.navbar input#menu-toggler {
+    display: none;
+}
+
+.navbar #hamburger-btn {
+    cursor: pointer;
+    display: none;
+}
+
+/* Positioning of each hyperlink */
+.navbar .all-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .all-links li {
+    position: relative;
+    list-style: none;
+}
+
+/* Styling of logo image */
+.navbar .logo-link {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.navbar #logo {
+    margin: 0 0;
+    width: 100px;
+}
+
+/* Styling of hyperlinks in header and footer */
+header a,
+footer a {
+    margin-left: 40px;
+    text-decoration: none;
+    color: var(--white);
+    height: 100%;
+    padding: 20px 0;
+    display: inline-block;
+    transition: border 0.5s ease-in-out;
+    font-size: 19px;
+}
+
+header a:hover,
+footer a:hover {
+    color: #FDF0FF;
+    transform: translateY(-10%);
+    text-decoration: underline;
+}
+
+/* Styling of feature wrapper */
+.feature-wrapper {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    /*centers child horizontally*/
+    justify-content: center;
+    /*centers child vertically */
+    align-items: center;
+    position: relative;
+    top: 58px;
+}
+
+footer span {
+    color: #fff;
+}
+
+footer a {
+    padding: 0;
+}
+
+.feature-wrapper::before {
+    /*generates empty content box*/
+    content: "";
+    background: url('../images/maleficent.jpg');
+    background-repeat: none;
+    position: absolute;
+    /*Aligns top of pseudo element with top of parent */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /*Darkens background for overlaying */
+    filter: brightness(0.35);
+    z-index: -1;
+}
+
+.feature-container {
+    width: 90%;
+    max-height: 410px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling of each feature card */
+.feature-cards {
+    width: min(40%, 150px);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.feature-cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.feature-cards:hover {
+    width: 100%;
+}
+
+/*background pictures of each card (outside the card)*/
+.feature-cards .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*prevents background from capturing mouse interaction */
+    pointer-events: none;
+    filter: brightness(0.25);
+    opacity: 0;
+}
+
+.feature-cards:hover .background {
+    opacity: 1 !important;
+}
+
+/* Information inside each feature card */
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    width: 90%;
+    height: 90%;
+    margin-top: -250px;
+    position: relative;
+    opacity: 0;
+}
+
+.description p {
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/*hyperlinks of each feature card that can transport user to location of attraction in the page */
+.description a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    color: #B31B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description:hover {
+    opacity: 1;
+}
+
+/* Filter button for attractions which yet to work due to lack of JavaScript */
+.filters {
+    display: flex;
+    margin-top: 140px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    justify-content: center;
+    gap: max(10px, 2%);
+}
+
+.filters button {
+    padding: 10px 17px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--background-color);
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+
+/*images on buttons that differentiate kid and adult rides */
+.filters button img {
+    width: 33px;
+    height: 33px;
+    object-fit: contain;
+}
+
+.filters button:hover {
+    background-color: var(--white);
+    color: var(--background-color);
+}
+
+/* Main container wrapping all attractions */
+.attraction-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Each container of each attraction having same width and bottom spacing */
+.attraction-maleficent,
+.attraction-ursula,
+.attraction-scar,
+.attraction-jaafar,
+.attraction-shan-yu {
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 80px;
+}
+
+/*Poster of each attraction */
+.maleficent-background img,
+.scar-background img,
+.shan-yu-background img,
+.ursula-background img,
+.jaafar-background img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/*Poster of maleficent, scar,shan-yu (group1) will be in the same polygon shape */
+.maleficent-background img,
+.scar-background img,
+.shan-yu-background img {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 70%);
+}
+
+/*Poster of ursula,jaafar (group 2 will be in same polygon shape*/
+.ursula-background img,
+.jaafar-background img {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 95%);
+}
+
+/*Whitespace containing information about park below the poster */
+.attraction-details {
+    display: inline-block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/*Group 1 with same polygon style poster, will also have same left column styling */
+.attraction-maleficent .left-column,
+.attraction-scar .left-column,
+.attraction-shan-yu .left-column {
+    grid-column: 1/2;
+    margin-left: 5px;
+}
+
+/*Group 2 with same polygon style poster, will also have same left column styling */
+.attraction-ursula .left-column,
+.attraction-jaafar .left-column {
+    margin-left: 120px;
+    padding: 10px;
+}
+
+/*Centers elements in both columns for all attractions */
+.left-column,
+.right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+
+/*Restaurant container contains gradient background and food, Show container contains gradient background and shows */
+.restaurant-container,
+.show-container {
+    width: 270px;
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 50px 10px;
+    z-index: 0;
+    border-radius: 10px;
+    position: relative;
+    left: 60px;
+}
+
+/*gradient for maleficent restaurant container */
+.attraction-maleficent .restaurant-container {
+    background: linear-gradient(180deg, #013220, #046307, #83E28C);
+}
+
+/*Styling for hamburger in maleficent */
+.attraction-maleficent .restaurant-container img {
+    width: 300px;
+    position: relative;
+    right: 65px;
+    z-index: 5;
+    filter: drop-shadow(20px 15px 10px rgba(0, 0, 0, 0.5));
+    /*creates shadow that outlines the object for 3D effect*/
+    animation: bounce 3s linear infinite;
+    /*animation for bouncing in the span of 3 seconds*/
+}
+
+/*Styling for attraction character beside restaurant container */
+.attraction-maleficent .left-column #character {
+    width: 140px;
+    position: relative;
+    top: 130px;
+    right: 5px;
+    z-index: 6;
+    filter: drop-shadow(20px 15px 10px rgba(0, 0, 0, 0.4));
+    outline: none;
+}
+
+/*Styling of h5 title in all attractions*/
+.attraction-info h5 {
+    position: relative;
+    bottom: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    text-align: left;
+}
+
+.attraction-maleficent .attraction-info h5,
+.attraction-maleficent .attraction-info span,
+.attraction-maleficent .attraction-info button {
+    color: #046307;
+}
+
+/*Styling of paragraph in all attractions*/
+.attraction-info p {
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    padding: 15px;
+    position: relative;
+    bottom: 40px;
+    text-align: left;
+}
+
+/*Styling of park hours, precaution and food/show options for all attractions */
+.attraction-info li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    bottom: 40px;
+    font-size: 20px;
+    font-weight: 550;
+    padding: 10px;
+}
+
+/*Emphasis on park information within lists for all attractions */
+.attraction-maleficent .attraction-info span,
+.attraction-ursula .attraction-info span,
+.attraction-scar .attraction-info span,
+.attraction-jaafar .attraction-info span,
+.attraction-shan-yu .attraction-info span {
+    font-size: 21px;
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+/*Styling of all button for all attractions */
+.attraction-info button {
+    padding: 18px;
+    font-size: 16px;
+    margin-left: 8px;
+    border-radius: 45px;
+    border: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*Creates pseudo element for all buttons for all attractions */
+.attraction-info button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: 1s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    /*Hides behind button content*/
+    z-index: -1;
+}
+
+/*Pseudo element becomes visible when hovered for all attractions */
+.attraction-info button:hover::before {
+    height: 120%;
+}
+
+.attraction-maleficent .attraction-info button:hover {
+    z-index: 4;
+    color: var(--white);
+}
+
+/*pseudo element of button for maleficent has green gradient */
+.attraction-maleficent .attraction-info button::before {
+    background: radial-gradient(#013220, #046307, #83E28C);
+}
+
+/*Colour styling for ursula attraction*/
+.attraction-ursula .attraction-info h5,
+.attraction-ursula .attraction-info span,
+.attraction-ursula .attraction-info button {
+    color: #6B2494;
+}
+
+.attraction-ursula button:hover {
+    z-index: 4;
+    color: var(--white);
+}
+
+.attraction-ursula .attraction-info button::before {
+    background: radial-gradient(#4B0082, #8A2BE2, #C379EE);
+}
+
+.attraction-ursula .show-container {
+    background: linear-gradient(#4B0082, #8A2BE2, #C379EE);
+}
+
+/*Styling for seats image in gradient show-container */
+.attraction-ursula .show-container img {
+    width: 230px;
+    position: relative;
+    bottom: 10px;
+    left: 40px;
+    z-index: 5;
+    border-radius: 10%;
+    filter: drop-shadow(20px 15px 10px rgba(0, 0, 0, 0.5));
+    animation: bounce 3s linear infinite;
+
+}
+
+
+/*Styling for all character in right column (ursula & jaafar)*/
+.right-column #character {
+    filter: drop-shadow(20px 15px 10px rgba(0, 0, 0, 0.4));
+    outline: none;
+    z-index: 6;
+    max-width: 180px;
+}
+
+.attraction-ursula #character {
+    position: relative;
+    top: 150px;
+    right: 280px;
+    transform: rotate(-10deg);
+}
+
+
+.attraction-scar .restaurant-container {
+    background: linear-gradient(180deg, #4A2222, #705142, #F4A460);
+}
+
+/*Colour styling for scar attraction */
+.attraction-scar .attraction-info h5,
+.attraction-scar .attraction-info span,
+.attraction-scar .attraction-info button {
+    color: #705142;
+}
+
+.attraction-scar button:hover {
+    z-index: 4;
+    color: var(--white);
+}
+
+.attraction-scar .attraction-info button::before {
+    background: radial-gradient(#A0522D, #BC8F8F, #FFE4E1);
+}
+
+/*Styling for bento food in scar gradient container */
+.attraction-scar .restaurant-container img {
+    max-width: 480px;
+    position: relative;
+    right: 70px;
+    z-index: 5;
+    filter: drop-shadow(20px 15px 10px rgba(0, 0, 0, 0.5));
+    animation: bounce 3s linear infinite;
+}
+
+/*Styling for scar character beside gradient container */
+.attraction-scar .left-column #character {
+    position: relative;
+    max-width: 170px;
+    top: 155px;
+    right: 35px;
+    transform: rotate(-15deg);
+}
+
+/*Colour styling for jaafar attraction */
+.attraction-jaafar .attraction-info h5,
+.attraction-jaafar .attraction-info span,
+.attraction-jaafar .attraction-info button {
+    color: #BA1E1E;
+}
+
+.attraction-jaafar button:hover {
+    z-index: 4;
+    color: var(--white);
+}
+
+.attraction-jaafar .attraction-info button::before {
+    background: radial-gradient(#800000, #DC143C, #FF6347);
+
+}
+
+.attraction-jaafar .restaurant-container {
+    background: linear-gradient(180deg, #800000, #DC143C, #FF6347);
+    margin-right: 10px;
+}
+
+/*Styling for indian food in jaafar gradient container */
+.attraction-jaafar .restaurant-container img {
+    max-width: 320px;
+    position: relative;
+    bottom: 20px;
+    left: 60px;
+    animation: bounce 3s linear infinite;
+}
+
+/*Styling for jaafar character beside gradient container */
+.attraction-jaafar .right-column #character {
+    width: 140px;
+    position: relative;
+    top: 140px;
+    right: 260px;
+    transform: rotate(0);
+}
+
+/*Colour styling for jaafar attraction */
+.attraction-shan-yu .show-container {
+    background: linear-gradient(180deg, #36454F, #708090, #D3D3D3);
+}
+
+.attraction-shan-yu .attraction-info h5,
+.attraction-shan-yu .attraction-info span,
+.attraction-shan-yu .attraction-info button {
+    color: #708090;
+}
+
+.attraction-shan-yu button:hover {
+    z-index: 4;
+    color: var(--white);
+}
+
+.attraction-shan-yu .attraction-info button::before {
+    background: radial-gradient(#36454F, #708090, #D3D3D3);
+}
+
+/*Styling for show in shan-yu gradient container */
+.attraction-shan-yu .show-container img {
+    max-width: 280px;
+    position: relative;
+    right: 50px;
+    z-index: 5;
+    filter: drop-shadow(20px 15px 10px rgba(0, 0, 0, 0.5));
+    animation: bounce 3s linear infinite;
+}
+
+/*Styling for shan-yu character beside gradient container */
+.attraction-shan-yu .left-column #character {
+    position: relative;
+    width: 80px;
+    top: 140px;
+    left: 30px;
+}
+
+/*Wrapper for map including its checkpoints */
+.map-wrapper {
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/*Centers child of map container */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*Image of map*/
+.map-container img {
+    object-fit: cover;
+    width: 100%;
+    z-index: 1;
+}
+
+/*Styling of all checkpoints on map */
+.circle-container {
+    position: absolute;
+    z-index: 2;
+}
+
+/*Styling of all attraction checkpoints on map*/
+.circle-container.maleficent {
+    top: 36%;
+    left: 15%;
+}
+
+.circle-container.shan-yu {
+    top: 10%;
+    left: 38%;
+}
+
+.circle-container.scar {
+    right: 10%;
+    top: 45%;
+}
+
+.circle-container.jaafar {
+    right: 18%;
+    top: 15%;
+}
+
+.circle-container.ursula {
+    right: 10%;
+    bottom: 15%;
+}
+
+/*Styling of button elements of all circle containers */
+.circle-container button {
+    background-color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 1.3rem;
+    color: blue;
+}
+
+/*Name of location in each button */
+.circle-container button span {
+    display: none;
+}
+
+.circle-container button:active span {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+/*Styling of entrance/exit checkpoints on map */
+.circle-container.entrance {
+    left: 15%;
+    bottom: 22%;
+}
+
+/*Change of colour for special information */
+.circle-container.entrance button {
+    color: red !important;
+}
+
+/*Styling of all restaurant checkpoints on map */
+.circle-container.restaurant-maleficent {
+    bottom: 36%;
+    left: 4%;
+    font-size: 0.8rem !important;
+    padding: 7px !important;
+}
+
+.circle-container.restaurant-scar {
+    bottom: 33%;
+    left: 30%;
+}
+
+.circle-container.restaurant-jaafar {
+    bottom: 15%;
+    right: 40%;
+}
+
+/*Styling of all show checkpoints on map */
+.circle-container.show-ursula {
+    top: 23%;
+    right: 5%;
+}
+
+.circle-container.show-shan-yu {
+    top: 36%;
+    left: 47%;
+}
+
+/*Styling of amenities checkpoints on map */
+.circle-container.store {
+    top: 8%;
+    left: 57%;
+}
+
+.circle-container.restroom {
+    bottom: 33%;
+    left: 63%;
+}
+
+/*Styling of footer*/
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #0b0d32;
+    padding: 20px 0;
+    flex-direction: column;
+    /* Use column layout */
+    align-items: center;
+    /* Center items horizontally */
+}
+
+footer div {
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*input and button of footer*/
+footer .newsletter {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer .newsletter form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 10px;
+    /* Add space between input and button */
+}
+
+footer .newsletter input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 250px;
+    /* Set a specific width for the input */
+}
+
+footer .newsletter button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+footer .newsletter button:hover {
+    background: #0056b3;
+}
+
+/*animation for bouncing of food and show images*/
+@keyframes bounce {
+    0% {
+        opacity: 0.4;
+        transform: translateY(-25px);
+        /* Start slightly above */
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateY(15px);
+        /* Bounce down */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsiveness of mobile device screen 600px or less */
+@media screen and (max-width:650px) {
+    .navbar .all-links {
+        position: fixed;
+        left: -100%;
+        width: 300px;
+        display: block;
+        height: 100vh;
+        top: 75px;
+        background: var(--background-color);
+        transition: left 0.3s ease;
+    }
+
+    .navbar #menu-toggler:checked~.all-links {
+        left: 0;
+    }
+
+    .navbar .all-links li {
+        font-size: 18px;
+    }
+
+    .navbar #hamburger-btn {
+        display: block;
+    }
+
+    .feature-cards:hover a {
+        font-size: 21px;
+    }
+
+    .feature-cards:hover span {
+        display: none;
+    }
+
+    .filters button {
+        padding: 8px 10px;
+        font-size: 18px;
+    }
+
+    .filters button img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .maleficent-background img,
+    .scar-background img,
+    .shan-yu-background img,
+    .ursula-background img,
+    .jaafar-background img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .attraction-details {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .attraction-info h5 {
+        text-align: center;
+        white-space: normal;
+        padding: 0 1rem;
+        font-size: 1.6rem;
+    }
+
+    .attraction-info p,
+    .attraction-info li {
+        font-size: 18px;
+        text-align: left;
+        margin: 10px;
+    }
+
+    .attraction-ursula .attraction-details,
+    .attraction-jaafar .attraction-details {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .attraction-maleficent .left-column,
+    .attraction-scar .left-column,
+    .attraction-shan-yu .left-column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: none;
+        height: 650px;
+        margin-bottom: 0;
+        width: 500px;
+    }
+
+    .attraction-maleficent .restaurant-container,
+    .attraction-ursula .show-container,
+    .attraction-scar .restaurant-container,
+    .attraction-jaafar .restaurant-container,
+    .attraction-shan-yu .show-container {
+        width: 430px;
+        min-width: 330px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .attraction-scar .left-column #character {
+        transform: translateX(-75%);
+        rotate: -10deg;
+        margin: 0 10px;
+    }
+
+    .attraction-jaafar .restaurant-container {
+        left: 0;
+    }
+
+    .attraction-maleficent .restaurant-container img,
+    .attraction-scar .restaurant-container img,
+    .attraction-shan-yu .show-container img {
+        width: 300px;
+        padding: 0;
+        position: relative;
+        left: 0px;
+        bottom: 40px;
+    }
+
+    .attraction-scar .restaurant-container img {
+        width: 700px;
+    }
+
+    .attraction-maleficent .left-column #character {
+        position: relative;
+        top: 230px;
+        right: 180px;
+        margin-bottom: 20px;
+    }
+
+    .attraction-scar .left-column #character {
+        position: relative;
+        top: 220px;
+    }
+
+    .attraction-shan-yu .left-column #character {
+        position: relative;
+        top: 190px;
+        left: 0;
+    }
+
+    .attraction-maleficent .right-column,
+    .attraction-scar .right-column,
+    .attraction-shan-yu .right-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .attraction-maleficent .right-column button,
+    .attraction-ursula .left-column button,
+    .attraction-scar .right-column button,
+    .attraction-jaafar .left-column button,
+    .attraction-shan-yu .right-column button {
+        margin: 0 auto;
+    }
+
+    .attraction-info button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .attraction-ursula .right-column,
+    .attraction-jaafar .right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 640px;
+        width: 500px;
+    }
+
+    .attraction-ursula .show-container {
+        position: relative;
+        top: 80px;
+        left: 0;
+    }
+
+    .attraction-ursula .show-container img,
+    .attraction-jaafar .restaurant-container img {
+        left: 0;
+        width: 300px;
+        bottom: 30px;
+    }
+
+    .attraction-ursula .right-column #character {
+        position: relative;
+        top: 30px;
+        left: 2px;
+    }
+
+    .attraction-jaafar .right-column #character {
+        position: relative;
+        left: 10px;
+        top: -70px;
+    }
+
+    .attraction-ursula .left-column,
+    .attraction-jaafar .left-column {
+        width: 500px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .attraction-shan-yu .left-column #character {
+        transform: translateX(-200px);
+    }
+
+    .attraction-maleficent .attraction-info span,
+    .attraction-ursula .attraction-info span,
+    .attraction-scar .attraction-info span,
+    .attraction-jaafar .attraction-info span {
+        width: 110px;
+    }
+
+    .map-wrapper {
+        margin-top: 0;
+    }
+
+    .circle-container button {
+        font-size: 11px;
+        padding: 3px;
+        max-width: 60px;
+    }
+
+    .circle-container button:active span {
+        font-size: 11px;
+        padding: 0;
+        margin: 0px;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer span:nth-child(1) {
+        flex-wrap: wrap;
+    }
+
+    footer span:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 10px;
+    }
+
+    footer a {
+        width: auto;
+        height: 20px;
+        margin: 5px;
+        font-size: 14px;
+    }
+}
+
+/* Responsiveness of mobile devices with screen 460px or less */
+@media screen and (max-width:460px) {
+
+    .attraction-ursula .show-container,
+    .attraction-scar .restaurant-container,
+    .attraction-jaafar .restaurant-container,
+    .attraction-shan-yu .show-container {
+        width: 330px;
+        margin-left: 10px;
+    }
+
+    .attraction-scar .restaurant-container {
+        margin-left: 50px;
+    }
+
+    .attraction-ursula .attraction-info,
+    .attraction-jaafar .attraction-info {
+        width: 335px;
+    }
+
+    .attraction-ursula .show-container {
+        margin-left: 70px;
+    }
+
+    .attraction-jaafar .restaurant-container {
+        margin-left: 40px;
+    }
+
+    .attraction-jaafar .right-column #character {
+        position: relative;
+        top: -60px;
+    }
+
+    .attraction-jaafar .right-column {
+        max-width: 450px;
+    }
+}
+
+/* Responsiveness for tablet devices with screen size between 601px and 1120px */
+@media screen and (min-width:601px) and (max-width:1120px) {
+
+    .attraction-ursula .left-column,
+    .attraction-jaafar .left-column {
+        max-width: 346px;
+        margin-left: 50px;
+    }
+
+    .attraction-ursula .right-column,
+    .attraction-jaafar .right-column {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width:365px) {
+    .main-content {
+        width: 365px;
+    }
+
+    footer {
+        min-width: 365px;
+    }
+}

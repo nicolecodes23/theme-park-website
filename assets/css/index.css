@@ -1,0 +1,1191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Crimson Text", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: center;
+  background: #0b0d32;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Responsiveness of navbar */
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+/* Positioning of each hyperlink */
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+/* Styling of logo image */
+.navbar .logo-link {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.navbar #logo {
+  margin: 0 0;
+  width: 100px;
+}
+
+/* Styling of hyperlinks in header and footer */
+header a,
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: var(--white);
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+  transition: border 0.5s ease-in-out;
+  font-size: 19px;
+}
+
+header a:hover,
+footer a:hover {
+  color: #fdf0ff;
+  transform: translateY(-10%);
+  text-decoration: underline;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #0b0d32;
+  padding: 20px 0;
+  flex-direction: column;
+  /* Use column layout */
+  align-items: center;
+  /* Center items horizontally */
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .newsletter {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer .newsletter form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Center items horizontally */
+  gap: 10px;
+  /* Add space between input and button */
+}
+
+footer .newsletter input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 250px;
+  /* Set a specific width for the input */
+}
+
+footer .newsletter button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+footer .newsletter button:hover {
+  background: #0056b3;
+}
+
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../images/hero.gif");
+  background-position: center 65%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homepage .content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content a {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  padding-top: 1.5%;
+}
+
+section > p {
+  text-align: center;
+}
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-top: 50px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.about-us {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Pricing Container styling */
+.pricing-container {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(68, 30, 163, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 100px;
+  padding-bottom: 1.5%;
+}
+
+.pricing-container {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+/* Column styling within the pricing container */
+.column {
+  flex: 25%;
+  padding: 10px;
+  width: calc(33.3% -30px);
+  box-sizing: border-box;
+}
+
+/* Pricing card styling */
+.pricing-card {
+  -webkit-transition: 0.4s background-color ease;
+  -ms-transition: 0.4s background-color ease;
+  transition: 0.4s background-color ease;
+  height: 600px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.4s;
+}
+
+/* Hover effect for pricing cards */
+.pricing-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+/* Badge box styling within pricing cards */
+.pricing-card .badge-box {
+  padding: 0 40px;
+  margin-top: 80px;
+}
+
+/* Badge text styling within pricing cards */
+.pricing-card .badge-box span {
+  display: inline-block;
+  border: 1px solid #4b7bec;
+  padding: 4px 12px;
+  border-radius: 25px;
+  overflow: hidden;
+  color: #4b7bec;
+}
+
+/* Pricing header styling within pricing cards */
+.pricing-card .pricing-header {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Plan title styling within pricing headers */
+.pricing-card .pricing-header .plan-title {
+  font-size: 30px;
+  color: black;
+  position: relative;
+  top: 25%;
+}
+
+/* Price circle styling within pricing headers */
+.pricing-card .pricing-header .price-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  left: calc(50% - 60px);
+  top: 60%;
+  background-color: white;
+  position: absolute;
+}
+
+/* Info text within price circle */
+.pricing-card .pricing-header .price-circle .info {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+}
+
+/* Price title within price circle */
+.pricing-card .pricing-header .price-circle .price-title {
+  display: block;
+  font-size: 28px;
+  padding: 28px 0 0;
+  font-weight: bold;
+}
+
+/* Small text within price title */
+.pricing-card .pricing-header .price-circle .price-title small {
+  font-size: 18px;
+}
+
+/* Section heading within pricing cards */
+.pricing-card h2 {
+  position: relative;
+  top: 40%;
+  color: #fff;
+}
+
+/* List styling within pricing cards */
+.pricing-card ul {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+/* List item styling within pricing cards */
+
+.pricing-card ul li {
+  list-style-type: none;
+  display: block;
+  padding: 10px 0 10px 0;
+  margin: 0;
+  border-bottom: 1px solid #f2f2f2;
+  border-color: grey;
+}
+
+/* Buy button box styling within pricing cards */
+.pricing-card .buy-button-box {
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+}
+
+/* Buy now button styling within pricing cards */
+.pricing-card .buy-button-box .buy-now {
+  text-decoration: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-image: linear-gradient(to left, #a55eea, #45aaf2);
+  margin-top: 20px;
+}
+
+/* Pricing Card Colors */
+/* Styling for single day plan pricing cards */
+.single .pricing-header {
+  background-color: #cbc3e3;
+}
+
+.single .price-circle {
+  border: 10px solid #cbc3e3;
+  transition: all 0.4s;
+}
+
+/* Hover effect for single day plan price circle */
+.single:hover .price-circle {
+  border-width: 5px;
+}
+
+/* Hover effect for single day plan buy now button */
+.single .buy-now:hover {
+  background-image: none;
+  background-color: #cbc3e3;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for three day plan pricing cards */
+.three .pricing-header {
+  background-color: #8a33ff;
+}
+
+.three .price-circle {
+  border: 10px solid #8a33ff;
+  transition: all 0.4s;
+}
+
+/* Hover effect for three day plan price circle */
+.three:hover .price-circle {
+  border-width: 5px;
+}
+
+/* Hover effect for three  day plan buy now button */
+.three .buy-now:hover {
+  background-image: none;
+  background-color: #8a33ff;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for vip plan pricing cards */
+.vip .pricing-header {
+  background-color: #5d3fd3;
+}
+
+.vip .price-circle {
+  border: 10px solid #5d3fd3;
+  transition: all 0.4s;
+}
+
+/* Hover effect for vip plan price circle */
+.vip:hover .price-circle {
+  border-width: 5px;
+}
+
+/* Hover effect for vip plan buy now button */
+.vip .buy-now:hover {
+  background-image: none;
+  background-color: #5d3fd3;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Pricing tag for the most popular plan in the park */
+.pricing-card .popular {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: auto;
+  padding: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #65ff00;
+  color: white;
+  font-size: 18px;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Transition for the hover for each  pricing card */
+.transition {
+  -webkit-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+@media screen and (max-width: 980px) {
+  .column {
+    flex: 1 1 calc(50% - 20px);
+    display: block;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .column {
+    flex: 1 1 100%;
+    display: block;
+  }
+}
+
+/* End of pricing cards */
+#booking h2 {
+  color: #0b0d32;
+}
+
+.booking-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-group {
+  margin: 5px 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-option {
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 5px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+.pricing-option label {
+  display: block;
+}
+
+.pricing-option input {
+  margin-right: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+section .cards .card {
+  background: #fff;
+  padding: 10px 15px;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+  width: calc(100% / 3 - 30px);
+  text-align: center;
+}
+
+.portfolio .cards .card {
+  padding: 0 0 20px;
+}
+
+.services .card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.portfolio .card img {
+  width: 100%;
+  padding-bottom: 10px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.cards .card p {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+.about .row {
+  padding: 0 10px;
+}
+
+.contact h2 {
+  color: #0b0d32;
+}
+
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+}
+
+.contact .col p {
+  margin-bottom: 10px;
+}
+
+.contact .col p i {
+  color: #7a7a7a;
+  margin-right: 10px;
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #525252;
+  transition: 0.2s ease;
+}
+
+.contact form button:hover {
+  background: #007bff;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #0b0d32;
+  padding: 20px 0;
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+}
+
+footer a {
+  padding: 0;
+}
+
+.container {
+  padding-top: 20px;
+  max-width: 1200px;
+  width: 95%;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+/* Grid layout */
+/* Container for the grid layout */
+.grid-container {
+  display: grid;
+  /* Use grid layout */
+  gap: 30px;
+  padding: 5px;
+  margin: 0 auto;
+  /* Center the container */
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+/* Individual grid item styling */
+.grid-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* Define columns with 2:1 ratio */
+  background: #f9f9f9;
+  border: 3px solid #544e4e;
+  border-radius: 8px;
+  overflow: hidden;
+  /* Hide overflow content */
+  width: 100%;
+}
+
+/* Hover effect for grid items */
+.grid-item:hover {
+  transform: scale(1.05);
+  /* Enlarge on hover */
+}
+
+/* Container for image and title */
+.img-title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Image styling within the img-title-box */
+.img-title-box img {
+  height: 60vh;
+  width: 115vh;
+  display: block;
+  /* Block display */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 3px solid #544e4e;
+  /* Dark grey border */
+}
+
+/* Paragraph styling within grid text */
+.grid-text p {
+  padding: 55px;
+}
+
+/* Subheading styling within grid item */
+.grid-item h3 {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+}
+
+/* Paragraph styling within grid item */
+.grid-item p {
+  font-size: 1.25em;
+  color: #666;
+}
+
+/* Button styling within grid text */
+.grid-text button {
+  justify-content: center;
+  width: 60%;
+  display: flex;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px auto 0;
+  transition: 0.4s ease-in-out;
+  /* Smooth transition effect */
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* Box shadow */
+  border-color: #000;
+  font-size: 1.5rem;
+}
+
+/* Hover effect for buttons */
+.grid-text button:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+
+/* For tablets and small screens */
+@media (max-width: 1024px) {
+  .grid-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .grid-item {
+    grid-template-columns: 1fr;
+    /* Single column layout */
+  }
+
+  .img-title-box img {
+    height: 40vh;
+    width: 80vh;
+  }
+
+  .grid-text h1 {
+    padding-left: 50px;
+  }
+
+  .grid-text button {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .grid-item p {
+    margin-top: 5%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  .grid-item {
+    grid-template-columns: 1fr;
+    /* Single column layout */
+  }
+
+  .img-title-box img {
+    height: 30vh;
+    width: 60vh;
+  }
+
+  .grid-text p {
+    padding: 0 20px;
+  }
+
+  .grid-text button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive styling for screens smaller than 1300px */
+@media screen and (max-width: 1300px) {
+  .grid-container {
+    display: grid;
+    gap: 50px;
+    /* Increased gap between grid items */
+    padding: 45px;
+    margin: 0 auto;
+    /* Center the container */
+    width: 100%;
+  }
+
+  .grid-item {
+    /*Defining columns*/
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    border: 1px solid #544e4e;
+  }
+
+  /* Image styling within grid item */
+  .grid-item img {
+    height: 52vh;
+    /* Reduced height */
+    width: 100vh;
+    /* Reduced width */
+  }
+
+  /* Button styling within grid text */
+  .grid-text button {
+    justify-content: center;
+    width: 50%;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin: 20px auto 0;
+    /* Margin around the button */
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+
+  .grid-item h1 {
+    margin-left: 175px;
+  }
+}
+
+/* Responsive styling for screens smaller than 640px */
+@media screen and (max-width: 640px) {
+  .grid-container {
+    padding: 15px;
+    /* Further Reduced padding inside the container */
+  }
+
+  .grid-item img {
+    height: 52vh;
+    width: 70vh;
+  }
+}
+
+/* End of Grid Layout*/
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    color: white;
+    background: #0b0d32;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked ~ .all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+
+  .about-text {
+    padding: 10px;
+  }
+
+  .about-image {
+    padding: 10px;
+  }
+
+  .content a {
+    font-size: 17px;
+    padding: 9px 20px;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .col {
+    width: 100%;
+  }
+
+  .contact .row .col:last-child {
+    margin-top: 40px;
+  }
+
+  footer a {
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* @media screen and (max-width:365px) {
+  .main-content {
+    width: 365px;
+  }
+
+  footer {
+    min-width: 365px;
+  }
+} */

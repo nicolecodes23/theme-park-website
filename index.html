@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phantom Park</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/icon.png" />
+
+    <!-- Fontawesome Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo">
+          <a href="index.html"
+            ><img id="logo" src="assets/images/logo.png" alt="logo"
+          /></a>
+        </h2>
+        <input type="checkbox" id="menu-toggler" />
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            width="24px"
+            height="24px"
+          ></svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#rides">Rides</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="index.html#pricing-container">Buy Tickets</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="homepage" id="home">
+        <div class="content">
+          <div class="text">
+            <h1>Phantom Park</h1>
+            <p>
+              Experience the Thrills, Discover the Magic!<br />
+              Gear up and make lasting memories.
+            </p>
+          </div>
+          <a href="#rides">Our Rides</a>
+        </div>
+      </section>
+
+      <section class="booking" id="booking">
+        <h2>Book Your Tickets</h2>
+        <div class="booking-form">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="visit-date">Visiting Date:</label>
+            <input type="date" id="visit-date" name="visit-date" required />
+          </div>
+          <div class="form-group">
+            <label>Select a pricing option:</label>
+            <div class="pricing-options">
+              <div class="pricing-option">
+                <label>
+                  <input type="radio" name="pricing" value="basic" required />
+                  Basic - $50
+                </label>
+              </div>
+              <div class="pricing-option">
+                <label>
+                  <input type="radio" name="pricing" value="standard" />
+                  Standard - $70
+                </label>
+              </div>
+              <div class="pricing-option">
+                <label>
+                  <input type="radio" name="pricing" value="premium" /> Premium
+                  - $100
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="submit-button">Book Now</button>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section class="about-us" id="about-us">
+        <div class="about-container">
+          <div class="about-text">
+            <h2>About Us</h2>
+            <p>
+              Welcome to Phantom Park, where adventure meets excitement! Our
+              park offers a range of thrilling rides and attractions designed to
+              provide fun for the whole family. From the spine-chilling House of
+              Shadows to the exhilarating Ghostly Glider, there's something for
+              everyone at Phantom Park. Join us for an unforgettable experience!
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="assets/images/about.gif" alt="About Us" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="pricing-container" id="pricing-container">
+        <!-- Single Day Pass -->
+        <div class="column">
+          <div class="pricing-card single">
+            <div class="pricing-header">
+              <span class="plan-title">Single Day Pass</span>
+              <div class="price-circle">
+                <span class="price-title">
+                  <small>$</small><span>50</span>
+                </span>
+                <span class="info">/ per Entry</span>
+              </div>
+            </div>
+            <div class="badge-box">
+              <span>Save 0%</span>
+            </div>
+            <ul>
+              <li><strong>All Access</strong> to all rides and attractions</li>
+            </ul>
+            <div class="buy-button-box">
+              <a href="#booking" class="buy-now">BUY NOW</a>
+            </div>
+          </div>
+        </div>
+        <!-- 3 Day Pass -->
+        <div class="column">
+          <div class="pricing-card three">
+            <div class="pricing-header">
+              <span class="plan-title">3 Day Pass</span>
+              <div class="price-circle">
+                <span class="price-title">
+                  <small>$</small><span>100</span>
+                </span>
+                <span class="info">/ per Entry</span>
+              </div>
+            </div>
+            <div class="badge-box">
+              <span>Save 33.3%</span>
+            </div>
+            <ul>
+              <li>
+                <strong>3 Days Access</strong> to all rides and attractions
+              </li>
+              <li>
+                <strong>1 Fast Pass Included</strong> redeemed at the ticket
+                counter
+              </li>
+            </ul>
+            <div class="buy-button-box">
+              <a href="#booking" class="buy-now">BUY NOW</a>
+            </div>
+          </div>
+        </div>
+        <!-- VIP Pass -->
+        <div class="column">
+          <div class="pricing-card vip">
+            <div class="popular">POPULAR</div>
+            <div class="pricing-header">
+              <span class="plan-title">VIP Pass</span>
+              <div class="price-circle">
+                <span class="price-title">
+                  <small>$</small><span>150</span>
+                </span>
+                <span class="info">/ per Entry</span>
+              </div>
+            </div>
+            <div class="badge-box">
+              <span>Save 60%</span>
+            </div>
+            <ul>
+              <li><strong>All Access</strong> to all rides and attractions</li>
+
+              <li>
+                <strong>1 Fast Pass Included</strong> redeemed at the ticket
+                counter
+              </li>
+              <li><strong>VIP seating</strong> at shows inside our parks!</li>
+              <li><strong>Complimentary</strong> Meal Tickets</li>
+            </ul>
+            <div class="buy-button-box">
+              <a href="#booking" class="buy-now">BUY NOW</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rides" id="rides">
+        <h2>Ride Gallery</h2>
+        <p>Experience thrilling adventures with our exciting rides!</p>
+        <div class="container">
+          <div class="slider-wrapper">
+            <button
+              id="prev-slide"
+              class="slide-button material-symbols-rounded"
+            >
+              chevron_left
+            </button>
+            <ul class="image-list">
+              <li>
+                <img
+                  class="image-item"
+                  src="assets/images/house-of-shadow.webp"
+                  alt="img-1"
+                />
+              </li>
+              <li>
+                <img
+                  class="image-item"
+                  src="assets/images/dark-carousel.jpg"
+                  alt="img-2"
+                />
+              </li>
+              <li>
+                <img
+                  class="image-item"
+                  src="assets/images/ferry.webp"
+                  alt="img-3"
+                />
+              </li>
+              <li>
+                <img
+                  class="image-item"
+                  src="assets/images/roller-coaster.webp"
+                  alt="img-4"
+                />
+              </li>
+            </ul>
+            <button
+              id="next-slide"
+              class="slide-button material-symbols-rounded"
+            >
+              chevron_right
+            </button>
+          </div>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid Layout for Attractions -->
+      <!-- GRID LAYOUT SECTION -->
+      <section class="grid-container" id="attractions">
+        <!-- Grid Item 1 -->
+        <div class="grid-item">
+          <div class="img-title-box">
+            <img src="assets/images/house-of-shadow.webp" alt="haunted house" />
+            <h3>The House Of Shadows</h3>
+          </div>
+          <div class="grid-text">
+            <p>
+              "The House of Shadows" is a popular haunted attraction designed to
+              provide a spine-chilling and immersive experience for
+              thrill-seekers and horror enthusiasts. Typically set in a dark and
+              foreboding location, this haunted house is filled with
+              meticulously crafted scenes and scenarios that aim to evoke fear
+              and excitement.
+            </p>
+            <a href="attractions.html"><button>Find Out More</button></a>
+          </div>
+        </div>
+        <!-- Grid Item 2 -->
+        <div class="grid-item">
+          <div class="img-title-box">
+            <img src="assets/images/dark-carousel.jpg" alt="carousel" />
+            <h3>Creaking Carousel</h3>
+          </div>
+          <div class="grid-text">
+            <p>
+              "Dark Carousel" is a thrilling and eerie amusement park ride that
+              combines the nostalgic charm of a classic carousel with the
+              spine-tingling excitement of a haunted attraction. Here's an
+              overview of what guests can expect from this unique experience
+            </p>
+            <a href="attractions.html"><button>Find Out More</button></a>
+          </div>
+        </div>
+        <!-- Grid Item 3 -->
+        <div class="grid-item">
+          <div class="img-title-box">
+            <img src="assets/images/roller-coaster.webp" alt="Roller Coaster" />
+            <h3>Ghostly Glider</h3>
+          </div>
+          <div class="grid-text">
+            <p>
+              "Ghostly Glider" is a high-speed roller coaster that takes riders
+              on a journey through a haunted, otherworldly realm. The ride
+              features an ominous, gothic design, with ghostly decorations and a
+              spine-tingling atmosphere that sets the stage for an unforgettable
+              experience.
+            </p>
+            <a href="attractions.html"><button>Find Out More</button></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Reach out to us for any inquiries or feedback.</p>
+        <div class="row">
+          <div class="col information">
+            <div class="contact-details">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Adventure Street,
+                Phantom Park, UK 12345
+              </p>
+              <p><i class="fas fa-envelope"></i> info@phantompark.com</p>
+              <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+              <p>
+                <i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 6:00 PM
+              </p>
+              <p>
+                <i class="fas fa-clock"></i> Saturday - Sunday: 10:00 AM - 5:00
+                PM
+              </p>
+              <p><i class="fas fa-globe"></i> www.phantompark.com</p>
+            </div>
+          </div>
+          <div class="col form">
+            <form action="/">
+              <input type="text" placeholder="Name*" required />
+              <input type="email" placeholder="Email*" required />
+              <textarea placeholder="Message*" required></textarea>
+              <button id="submit" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <span>Copyright © 2024 All Rights Reserved</span>
+        <span class="link">
+          <a href="index.html">Home</a>
+          <a href="index.html#rides">Rides</a>
+          <a href="attractions.html">Attractions</a>
+          <a href="index.html#pricing-container">Buy Tickets</a>
+          <a href="faq.html">FAQs</a>
+          <a href="index.html#contact">Contact Us</a>
+        </span>
+      </div>
+      <div class="newsletter">
+        <form action="/subscribe" method="post">
+          <input
+            type="email"
+            id="subscribe-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </footer>
+    <script>
+      const initSlider = () => {
+        const imageList = document.querySelector(".slider-wrapper .image-list");
+        const slideButtons = document.querySelectorAll(
+          ".slider-wrapper .slide-button"
+        );
+        const sliderScrollbar = document.querySelector(
+          ".container .slider-scrollbar"
+        );
+        const scrollbarThumb =
+          sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+        // Handle scrollbar thumb drag
+        scrollbarThumb.addEventListener("mousedown", (e) => {
+          const startX = e.clientX;
+          const thumbPosition = scrollbarThumb.offsetLeft;
+          const maxThumbPosition =
+            sliderScrollbar.getBoundingClientRect().width -
+            scrollbarThumb.offsetWidth;
+
+          // Update thumb position on mouse move
+          const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(
+              0,
+              Math.min(maxThumbPosition, newThumbPosition)
+            );
+            const scrollPosition =
+              (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+          };
+
+          // Remove event listeners on mouse up
+          const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+          };
+
+          // Add event listeners for drag interaction
+          document.addEventListener("mousemove", handleMouseMove);
+          document.addEventListener("mouseup", handleMouseUp);
+        });
+
+        // Slide images according to the slide button clicks
+        slideButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          });
+        });
+
+        // Show or hide slide buttons based on scroll position
+        const handleSlideButtons = () => {
+          slideButtons[0].style.display =
+            imageList.scrollLeft <= 0 ? "none" : "flex";
+          slideButtons[1].style.display =
+            imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+        };
+
+        // Update scrollbar thumb position based on image scroll
+        const updateScrollThumbPosition = () => {
+          const scrollPosition = imageList.scrollLeft;
+          const thumbPosition =
+            (scrollPosition / maxScrollLeft) *
+            (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+          scrollbarThumb.style.left = `${thumbPosition}px`;
+        };
+
+        // Call these two functions when image list scrolls
+        imageList.addEventListener("scroll", () => {
+          updateScrollThumbPosition();
+          handleSlideButtons();
+        });
+      };
+
+      window.addEventListener("resize", initSlider);
+      window.addEventListener("load", initSlider);
+    </script>
+  </body>
+</html>

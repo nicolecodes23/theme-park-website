@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Help Centre</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jafrin" />
+    <meta http-equiv="refresh" content="600" />
+    <link rel="stylesheet" href="assets/css/faq.css" />
+    <!-- link for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+    />
+    <!-- link for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/icon.png" />
+  </head>
+
+  <body>
+    <header>
+      <!-- navigation bar -->
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <img id="logo" src="assets/images/logo.png" alt="logo" />
+        </a>
+        <input type="checkbox" id="menu-toggler" />
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            width="24px"
+            height="24px"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </label>
+        <!-- all navbar links to other pages -->
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#rides">Rides</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="index.html#booking">Buy Tickets</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- main title of page -->
+      <div class="header">
+        <h1 class="header-title">FAQ</h1>
+        <p class="header-desc">Frequently Asked Questions</p>
+
+        <!-- search area -->
+        <div class="search">
+          <input type="text" placeholder="Search..." />
+          <button>Search</button>
+        </div>
+      </div>
+      <section>
+        <!-- social media button title -->
+        <div class="header3">
+          <h3 class="header3-title">Reach Us</h3>
+        </div>
+        <div class="social-wrapper">
+          <!-- social media button -->
+          <div class="social-button">
+            <div class="icon">
+              <a
+                class="social-icon"
+                href="https://www.facebook.com"
+                target="_blank"
+              >
+                <i class="fa fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          <!-- social media button -->
+          <div class="social-button">
+            <div class="icon">
+              <a
+                class="social-icon"
+                href="https://www.twitter.com"
+                target="_blank"
+              >
+                <i class="fa fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <!-- social media button -->
+          <div class="social-button">
+            <div class="icon">
+              <a
+                class="social-icon"
+                href="https://www.instagram.com"
+                target="_blank"
+              >
+                <i class="fa fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <!-- social media button -->
+          <div class="social-button">
+            <div class="icon">
+              <a
+                class="social-icon"
+                href="https://www.youtube.com"
+                target="_blank"
+              >
+                <i class="fa fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  faq area with each question and respective answer -->
+      <div class="faq-box">
+        <div class="faq-wrapper">
+          <input type="checkbox" class="faq-trigger" id="faq-trigger-1" />
+          <!-- first question -->
+          <label class="faq-title" for="faq-trigger-1">Opening Hours</label>
+          <!-- first answer -->
+          <div class="faq-detail">
+            <p>
+              The Theme Park opens daily from 10am to 9pm except on Sundays.
+            </p>
+          </div>
+        </div>
+        <div class="faq-wrapper">
+          <input type="checkbox" class="faq-trigger" id="faq-trigger-2" />
+          <!-- second question -->
+          <label class="faq-title" for="faq-trigger-2">Parking</label>
+          <!-- second answer -->
+          <div class="faq-detail">
+            <p>
+              Parking is located by the North Entrance ($2.50SGD per entry).
+              Free parking promotion can be redeemed via our online platforms.
+              Note that disability parking is the most accessible through the
+              Lion Mall Parking Lot.
+            </p>
+          </div>
+        </div>
+        <div class="faq-wrapper">
+          <input type="checkbox" class="faq-trigger" id="faq-trigger-3" />
+          <!-- third question -->
+          <label class="faq-title" for="faq-trigger-3"
+            >Re-Entry into the Park</label
+          >
+          <!-- third answer -->
+          <div class="faq-detail">
+            <p>
+              Day tickets allow one entry per day and multiple entries per day
+              for Annual Passes
+            </p>
+          </div>
+        </div>
+        <div class="faq-wrapper">
+          <input type="checkbox" class="faq-trigger" id="faq-trigger-4" />
+          <!-- fourth question -->
+          <label class="faq-title" for="faq-trigger-4">Food Requirements</label>
+          <!-- fourth answer -->
+          <div class="faq-detail">
+            <p>
+              Our Parks carry every taste from each corner of the world where we
+              promise to take your tastebuds on a journey. We also cater to
+              individuals with specific requirements such as halal, vegan,
+              dairy-free and gluten-free food.
+            </p>
+          </div>
+        </div>
+        <div class="faq-wrapper">
+          <input type="checkbox" class="faq-trigger" id="faq-trigger-5" />
+          <!-- fifth question -->
+          <label class="faq-title" for="faq-trigger-5">Lockers</label>
+          <!-- fifth answer -->
+          <div class="faq-detail">
+            <p>
+              Lockers are available for rent and are located by the entrance of
+              each ride. The first 30 minutes is $2SGD and $0.50 for every
+              subsequent 30 minute block.
+            </p>
+          </div>
+        </div>
+        <div class="faq-wrapper">
+          <input type="checkbox" class="faq-trigger" id="faq-trigger-6" />
+          <!-- sixth question -->
+          <label class="faq-title" for="faq-trigger-6">Weather Alert</label>
+          <!-- sixth answer -->
+          <div class="faq-detail">
+            <p>
+              A blaring alarm would be sent out prior to forecasted thunder
+              storms / unfit weather conditions. If however, our customers
+              arrive during unprecedented weathers, we are more than happy to
+              provide accommodation and/or compensation!
+            </p>
+          </div>
+        </div>
+        <div class="faq-wrapper">
+          <input type="checkbox" class="faq-trigger" id="faq-trigger-7" />
+          <!-- seventh question -->
+          <label class="faq-title" for="faq-trigger-7">Lost&Found</label>
+          <!-- seventh answer -->
+          <div class="faq-detail">
+            <p>
+              For misplaced personal belongings, please approach our customer
+              service booths that are conveniently located around the park.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer and links to other pages -->
+    <footer>
+      <div>
+        <span>Copyright © 2024 All Rights Reserved</span>
+        <span class="link">
+          <a href="index.html">Home</a>
+          <a href="index.html#rides">Rides</a>
+          <a href="attractions.html">Attractions</a>
+          <a href="index.html#pricing-container">Buy Tickets</a>
+          <a href="faq.html">FAQs</a>
+          <a href="index.html#contact">Contact Us</a>
+        </span>
+      </div>
+      <!-- subscription to newsletter -->
+      <div class="newsletter">
+        <form action="/subscribe" method="post">
+          <input
+            type="email"
+            id="subscribe-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

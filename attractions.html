@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/attractions.css" />
+    <meta name="author" content="Phoon Jia Yi" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--For icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--For fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>Web Dev Attraction Page 2</title>
+  </head>
+
+  <body>
+    <!--header and navigation bar-->
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <img id="logo" src="assets/images/logo.png" alt="logo" />
+        </a>
+        <!-- <h2 class="logo"><a href="#">LOGO</a></h2> -->
+        <!--toggle button for responsiveness at small screens-->
+        <input type="checkbox" id="menu-toggler" />
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            width="24px"
+            height="24px"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </label>
+        <!--links to visit different pages-->
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#rides">Rides</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="index.html#booking">Buy Tickets</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!--Attraction Feature Cards (variety of theme parks ranging from kid-friendly, suitable for adults and appropriate for all)-->
+      <div class="feature-wrapper">
+        <div class="feature-container">
+          <!--Feature 1: Maleficent-->
+          <div class="feature-cards maleficent">
+            <img src="assets/images/maleficent.jpg" alt="maleficent" />
+            <img
+              src="assets/images/maleficent.jpg"
+              alt="maleficent"
+              class="background"
+            />
+            <div class="description">
+              <h4><a href="#maleficent" accesskey="1">Maleficent</a></h4>
+              <p>
+                Dark Enchantment Kingdom<span
+                  >, a maleficent theme park, offers thrill-seekers chilling
+                  adventures in a realm of sinister wonders and ominous
+                  enchantments.</span
+                >
+              </p>
+            </div>
+          </div>
+          <!--Feature 2:Ursula-->
+          <div class="feature-cards ursula">
+            <img src="assets/images/ursula.jpg" alt="ursula" />
+            <img
+              src="assets/images/ursula.jpg"
+              alt="ursula"
+              class="background"
+            />
+            <div class="description">
+              <h4><a href="#ursula" accesskey="2">Ursula</a></h4>
+              <p>
+                Ursula's Abyss<span
+                  >, a villainous theme park, immerses visitors in underwater
+                  realms of dark magic, treacherous seas, and spellbinding
+                  adventures inspired by the sea witch herself.
+                </span>
+              </p>
+            </div>
+          </div>
+          <!--Feature 3:Scar-->
+          <div class="feature-cards scar">
+            <img src="assets/images/scar.jpg" alt="scar" />
+            <img src="assets/images/scar.jpg" alt="scar" class="background" />
+            <div class="description">
+              <h4><a href="#scar" accesskey="3">Scar</a></h4>
+              <p>
+                Scar's Dominion<span
+                  >, a theme park inspired by the Lion King's infamous villain,
+                  plunges visitors into a world of shadowy savannahs, perilous
+                  cliffs, and thrilling encounters with the untamed wild.</span
+                >
+              </p>
+            </div>
+          </div>
+          <!--Feature 4:Jaafar-->
+          <div class="feature-cards jaafar">
+            <img src="assets/images/jaafar.jpg" alt="jaafar" />
+            <img
+              src="assets/images/jaafar.jpg"
+              alt="jaafar"
+              class="background"
+            />
+            <div class="description">
+              <h4><a href="#jaafar" accesskey="4">Jaafar</a></h4>
+              <p>
+                Jaafar's Enchanted Empire<span
+                  >, a theme park inspired by Aladdin's infamous sorcerer,
+                  invites visitors into a realm of mystical deserts, hidden
+                  treasures, and magical adventures filled with enchantments and
+                  dark intrigue.</span
+                >
+              </p>
+            </div>
+          </div>
+          <!--Feature 5:Shan-Yu-->
+          <div class="feature-cards shan-yu">
+            <img src="assets/images/shan-yu.jpg" alt="shan-yu" />
+            <img
+              src="assets/images/shan-yu.jpg"
+              alt="shan-yu"
+              class="background"
+            />
+            <div class="description">
+              <h4><a href="#shan-yu" accesskey="5">Shan Yu</a></h4>
+              <p>
+                Shan Yu's Warfront<span
+                  >, a theme park inspired by Mulan's fearsome antagonist,
+                  immerses visitors in rugged landscapes, ancient fortresses,
+                  and thrilling experiences that echo the fierce battles and
+                  warrior spirit of ancient China.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--filter buttons-->
+      <div class="filters">
+        <button class="button">All</button>
+        <button class="button">
+          <img src="assets/images/candy.png" alt="candy" />
+          Child-Friendly
+        </button>
+        <button class="button">
+          <img src="assets/images/ghost.png" alt="ghost" />
+          Adults
+        </button>
+      </div>
+
+      <!--Attraction details-->
+      <div class="attraction-wrapper">
+        <div class="attraction-container">
+          <!--Attraction 1:Maleficent-->
+          <div class="attraction-maleficent" id="maleficent">
+            <div class="maleficent-background">
+              <img src="assets/images/maleficent-poster.webp" alt="poster" />
+            </div>
+            <!--Whitespace below poster for more details-->
+            <div class="attraction-details">
+              <!--Gradient background card to showcase theme of park and food available-->
+              <div class="left-column">
+                <div class="restaurant-container">
+                  <img src="assets/images/maleficent-food.png" alt="food" />
+                </div>
+                <img
+                  id="character"
+                  src="assets/images/maleficent-char.png"
+                  alt="character"
+                />
+              </div>
+              <!--Park information-->
+              <div class="right-column">
+                <div class="attraction-info">
+                  <h5>Embrace the Magic, Fear the Power!</h5>
+                  <p>
+                    Board your own dragon and soar through the night skies,
+                    dodging spells and unleashing your own sorcery. Only the
+                    brave dare to face Maleficent's realm—will you conquer the
+                    darkness or succumb to its power?
+                  </p>
+                  <section>
+                    <ul>
+                      <li><span>Attraction Hours:</span> 10am-10pm (Daily)</li>
+                      <li>
+                        <span>Precaution:</span> May cause motion sickness.
+                      </li>
+                      <li>
+                        <span>Restaurants Available:</span>Enchanted Burger
+                        Joint
+                      </li>
+                    </ul>
+                  </section>
+                  <button class="button maleficent">
+                    See here for details.
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Attraction 2:Ursula-->
+          <div class="attraction-ursula" id="ursula">
+            <div class="ursula-background">
+              <img src="assets/images/ursula-poster.jpg" alt="poster" />
+            </div>
+            <!--Whitespace below poster for more details-->
+            <div class="attraction-details">
+              <!--Park information-->
+              <div class="left-column">
+                <div class="attraction-info">
+                  <h5>Dive into the Depths of Enchantment!</h5>
+                  <p>
+                    Plunge into the dark and mysterious world of Ursula, the sea
+                    witch. Slide through her labyrinth of twisting tentacles and
+                    glowing seashells, where every turn and drop is filled with
+                    magical surprises and underwater wonders. Will you be caught
+                    in Ursula's spellbinding grip? Dive deep and find out!
+                  </p>
+                  <section>
+                    <ul>
+                      <li><span>Attraction Hours:</span> 10am-10pm (Daily)</li>
+                      <li><span>Precaution:</span> For ages 15 and below</li>
+                      <li><span>Ariel Screening Show:</span> 12pm, 3pm, 6pm</li>
+                    </ul>
+                  </section>
+                  <button class="button ursula">See here for details.</button>
+                </div>
+              </div>
+              <!--Gradient background card to showcase theme of park and shows available-->
+              <div class="right-column">
+                <div class="show-container">
+                  <img src="assets/images/ursula-show.png" alt="food" />
+                </div>
+                <img
+                  id="character"
+                  src="assets/images/ursula-char.png"
+                  alt="character"
+                />
+              </div>
+            </div>
+          </div>
+          <!--Attraction 3:Scar-->
+          <div class="attraction-scar" id="scar">
+            <div class="scar-background">
+              <img src="assets/images/scar-poster.jpg" alt="poster" />
+            </div>
+            <!--Whitespace below poster for more details-->
+            <div class="attraction-details">
+              <!--Gradient background card to showcase theme of park and food available-->
+              <div class="left-column">
+                <div class="restaurant-container">
+                  <img src="assets/images/scar-food.png" alt="food" />
+                </div>
+                <img
+                  id="character"
+                  src="assets/images/scar-char.png"
+                  alt="character"
+                />
+              </div>
+              <!--Park information-->
+              <div class="right-column">
+                <div class="attraction-info">
+                  <h5>
+                    Bow to the True King of Darkness: Scar's Reign Begins!
+                  </h5>
+                  <p>
+                    A dark ride through the heart of Scar's territory, where
+                    guests encounter eerie landscapes, lurking hyenas, and
+                    Scar's ominous presence hunting them down. Enter the cave,
+                    if you dare!
+                  </p>
+                  <section>
+                    <ul>
+                      <li><span>Attraction Hours:</span> 10am-10pm (Daily)</li>
+                      <li>
+                        <span>Precaution:</span> Proper footwear required.
+                      </li>
+                      <li>
+                        <span>Restaurants Available:</span>Scar's Bento Kingdom
+                      </li>
+                    </ul>
+                  </section>
+                  <button class="button scar">See here for details.</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Attraction 4:Jaafar-->
+          <div class="attraction-jaafar" id="jaafar">
+            <div class="jaafar-background">
+              <img src="assets/images/jaafar-poster.jpg" alt="poster" />
+            </div>
+            <!--Whitespace below poster for more details-->
+            <div class="attraction-details">
+              <!--Park information-->
+              <div class="left-column">
+                <div class="attraction-info">
+                  <h5>Face Jafar's Fury on the Flight of Shadows!</h5>
+                  <p>
+                    Designed by Jafar himself, the carpets twist and turn
+                    through a maze of dark and treacherous landscapes inspired
+                    by the mystical realm of Agrabah. As riders soar through the
+                    air, they must evade Jafar's malevolent spells and traps,
+                    including swirling sandstorms and illusions that distort
+                    perception. Will you be able to hold on to the magic carpet
+                    ride?
+                  </p>
+                  <section>
+                    <ul>
+                      <li><span>Attraction Hours:</span> 10am-10pm (Daily)</li>
+                      <li>
+                        <span>Precaution:</span> May cause motion sickness.
+                      </li>
+                      <li>
+                        <span>Restaurants Available:</span> Alaadin Restaurant
+                      </li>
+                    </ul>
+                  </section>
+                  <button class="button jaafar">See here for details.</button>
+                </div>
+              </div>
+              <!--Gradient background card to showcase theme of park and shows available-->
+              <div class="right-column">
+                <div class="restaurant-container">
+                  <img src="assets/images/jaafar-food.png" alt="food" />
+                </div>
+                <img
+                  id="character"
+                  src="assets/images/jaafar-char.png"
+                  alt="character"
+                />
+              </div>
+            </div>
+          </div>
+          <!--Attraction 5:Shan-Yu-->
+          <div class="attraction-shan-yu" id="shan-yu">
+            <div class="shan-yu-background">
+              <img src="assets/images/shan-yu-poster.jpg" alt="poster" />
+            </div>
+            <!--Whitespace below poster for more details-->
+            <div class="attraction-details">
+              <!--Gradient background card to showcase theme of park and food available-->
+              <div class="left-column">
+                <div class="show-container">
+                  <img src="assets/images/shan-yu-show.png" alt="show" />
+                </div>
+                <img
+                  id="character"
+                  src="assets/images/shan-yu-char.png"
+                  alt="character"
+                />
+              </div>
+              <!--Park information-->
+              <div class="right-column">
+                <div class="attraction-info">
+                  <h5>Venture into the Shadows - Shan Yu's Enchanted Maze!</h5>
+                  <p>
+                    Step into the heart of adventure with Shan Yu's Enchanted
+                    Maze, a thrilling attraction filled with twists, turns, and
+                    surprises at every corner. Navigate through towering hedges,
+                    hidden pathways, and ancient relics as you uncover the
+                    secrets of this mystical labyrinth. Will you conquer the
+                    maze or become lost in its shadows? The challenge awaits!
+                  </p>
+                  <section>
+                    <ul>
+                      <li><span>Attraction Hours:</span> 10am-10pm (Daily)</li>
+                      <li><span>Precaution:</span> For ages 13 and above</li>
+                      <li><span>Kung Fu Show:</span> 12pm, 2pm, 4pm, 6pm</li>
+                    </ul>
+                  </section>
+                  <button class="button shan-yu">See here for details.</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Theme park map-->
+      <div class="map-wrapper">
+        <map class="map-container">
+          <!--Image of map-->
+          <img src="assets/images/map.jpg" alt="map" />
+          <!--Checkpoints on map-->
+          <div class="circle-container maleficent">
+            <button>
+              <i class="bx bxs-castle"></i>
+              <span class="circle-name">Maleficent Kingdom</span>
+            </button>
+          </div>
+          <div class="circle-container shan-yu">
+            <button>
+              <i class="bx bxs-castle"></i>
+              <span class="circle-name">Shan Yu's Warfront</span>
+            </button>
+          </div>
+          <div class="circle-container scar">
+            <button>
+              <i class="bx bxs-castle"></i>
+              <span class="circle-name">Scar's Dominion</span>
+            </button>
+          </div>
+          <div class="circle-container ursula">
+            <button>
+              <i class="bx bxs-castle"></i>
+              <span class="circle-name">Ursula's Abyss</span>
+            </button>
+          </div>
+          <div class="circle-container jaafar">
+            <button>
+              <i class="bx bxs-castle"></i>
+              <span class="circle-name">Jaafar's Empire</span>
+            </button>
+          </div>
+          <div class="circle-container entrance">
+            <button>
+              <i class="bx bx-map"></i>
+              <span class="circle-name">Entrance / Exit</span>
+            </button>
+          </div>
+          <div class="circle-container restaurant-maleficent">
+            <button>
+              <i class="bx bx-restaurant"></i>
+              <span class="circle-name">Enchanted Burger Joint</span>
+            </button>
+          </div>
+          <div class="circle-container restaurant-scar">
+            <button>
+              <i class="bx bx-restaurant"></i>
+              <span class="circle-name">Scar's Bento</span>
+            </button>
+          </div>
+          <div class="circle-container restaurant-jaafar">
+            <button>
+              <i class="bx bx-restaurant"></i>
+              <span class="circle-name">Alaadin Restaurant</span>
+            </button>
+          </div>
+          <div class="circle-container show-ursula">
+            <button>
+              <i class="bx bxs-face"></i>
+              <span class="circle-name">Ariel Screening</span>
+            </button>
+          </div>
+          <div class="circle-container show-shan-yu">
+            <button>
+              <i class="bx bxs-face"></i>
+              <span class="circle-name">Kung Fu Show</span>
+            </button>
+          </div>
+          <div class="circle-container store">
+            <button>
+              <i class="bx bx-shopping-bag"></i>
+              <span class="circle-name">Merchandise Store</span>
+            </button>
+          </div>
+          <div class="circle-container restroom">
+            <button>
+              <i class="bx bx-shower"></i>
+              <span class="circle-name">Restroom</span>
+            </button>
+          </div>
+        </map>
+      </div>
+    </main>
+
+    <!--footer-->
+    <footer>
+      <div>
+        <span>Copyright © 2024 All Rights Reserved</span>
+        <span class="link">
+          <a href="index.html">Home</a>
+          <a href="index.html#rides">Rides</a>
+          <a href="attractions.html">Attractions</a>
+          <a href="index.html#pricing-container">Buy Tickets</a>
+          <a href="faq.html">FAQs</a>
+          <a href="index.html#contact">Contact Us</a>
+        </span>
+      </div>
+      <div class="newsletter">
+        <form action="/subscribe" method="post">
+          <input
+            type="email"
+            id="subscribe-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
