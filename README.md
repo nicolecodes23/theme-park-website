@@ -20,7 +20,7 @@ Phantom Park is inspired by the notorious villains of Disney and other spooky ch
 ## Project Description 
 Project assigned by SIM-UOL to create a fictional theme park website to showcase theme park's unique attraction, shows, events to excite potential visitors.
 
-[static page](https://hub.labs.coursera.org:443/connect/sharedsbexqslt?forceRefresh=false&path=%2F&isLabVersioning=true)
+You can find the link here: [static page](https://hub.labs.coursera.org:443/connect/sharedsbexqslt?forceRefresh=false&path=%2F&isLabVersioning=true)
 
 **Please note that due to the lack of Javascript implementation according to the marking rubrics majority of the buttons do not have event listeners**
 
